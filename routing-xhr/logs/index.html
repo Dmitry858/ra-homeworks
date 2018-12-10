@@ -27,6 +27,7 @@
 
   <script type="text/babel" src="./js/Current.js"></script>
   <script type="text/babel" src="./js/Archive.js"></script>
+  <script type="text/babel" src="./js/withFetcher.js"></script>
   <script type="text/babel" src="./js/App.js"></script>
 
   <script type="text/babel">
@@ -37,8 +38,10 @@
     const Link = ReactRouter.Link;
     const Switch = ReactRouter.Switch;
 
+    const AppWithFetch = withFetcher({url: 'https://baconipsum.com/api/?type=meat-and-filler&paras=50', collName: 'logs'})(App);
+
     ReactDOM.render(
-      <App/>,
+      <AppWithFetch />,
       document.getElementById('root')
     );
   </script>
