@@ -52,7 +52,7 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <Menu handleSearch={'this.onSearch'} title={'Приложение'} version={'1.3'} items={menuItems}/>
+        <Menu handleSearch={this.onSearch} title={'Приложение'} version={'1.3'} items={menuItems}/>
         <div className="row">
           <Form {...this.state} handleChange={this.onChange} handleSubmit={this.onSubmit}/>
         </div>
